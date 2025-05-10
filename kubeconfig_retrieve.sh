@@ -4,6 +4,8 @@ read -p "Server user: " server_user
 read -p "Server address: " server_address
 read -p "kubeconfig name: " config_name
 
+mkdir -p ~/.kube
+
 # Retrieve the KUBECONFIG file from the server, alter it, then place it in the ~/.kube directory
 ssh \
 	-o StrictHostKeyChecking=no \
